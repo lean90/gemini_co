@@ -25,14 +25,13 @@ class Gemini_ErrorException extends ErrorException {
 function _exception_handler($errno, $errstr, $errfile, $errline) {
     throw new Gemini_ErrorException ( $errstr, $errno, 0, $errfile, $errline );
 }
-
 set_error_handler ( "_exception_handler" );
 
 /*
  * --------------------------------------------------------------- APPLICATION ENVIRONMENT --------------------------------------------------------------- You can load different configurations depending on your current environment. Setting the environment also influences things like logging and error reporting. This can be set to anything, but default usage is: development testing production NOTE: If you change these, also change the error_reporting() code below
  */
 
-include_once 'ENVIRONMENT.php';
+include_once '../ENVIRONMENT.php';
 
 /*
  * --------------------------------------------------------------- ERROR REPORTING --------------------------------------------------------------- Different environments will require different levels of error reporting. By default development will show errors but testing and live will hide them.
@@ -41,7 +40,7 @@ include_once 'ENVIRONMENT.php';
 if (defined ( 'ENVIRONMENT' )) {
     switch (ENVIRONMENT) {
         case 'development' :
-        case 'deveg' :
+        case 'demo' :
             error_reporting ( E_ALL );
             break;
         case 'production' :
@@ -61,6 +60,11 @@ $system_path = '../system';
  * --------------------------------------------------------------- APPLICATION FOLDER NAME --------------------------------------------------------------- If you want this front controller to use a different "application" folder then the default one you can set its name here. The folder can also be renamed or relocated anywhere on your server. If you do, use a full server path. For more info please see the user guide: http://codeigniter.com/user_guide/general/managing_apps.html NO TRAILING SLASH!
  */
 $application_folder = '../application';
+
+/*
+ * --------------------------------------------------------------- VENDOR FOLDER NAME --------------------------------------------------------------- If you want this front controller to use a different "application" folder then the default one you can set its name here. The folder can also be renamed or relocated anywhere on your server. If you do, use a full server path. For more info please see the user guide: http://codeigniter.com/user_guide/general/managing_apps.html NO TRAILING SLASH!
+ */
+$vendor_folder = "../vendor";
 
 /*
  * -------------------------------------------------------------------- DEFAULT CONTROLLER -------------------------------------------------------------------- Normally you will set your default controller in the routes.php file. You can, however, force a custom routing by hard-coding a specific controller class/function here. For most applications, you WILL NOT set your routing here, but it's an option for those special instances where you might want to override the standard routing in a specific front controller that shares a common CI installation. IMPORTANT: If you set the routing here, NO OTHER controller will be callable. In essence, this preference limits your application to ONE specific controller. Leave the function name blank if you need to call functions dynamically via the URI. Un-comment the $routing array below to use this feature
@@ -128,15 +132,28 @@ if (is_dir ( $application_folder )) {
     if (! is_dir ( BASEPATH . $application_folder . '/' )) {
         exit ( "Your application folder path does not appear to be set correctly. Please open the following file and correct this: " . SELF );
     }
-    
     define ( 'APPPATH', BASEPATH . $application_folder . '/' );
 }
+
+// The path to the "vendor" folder
+// if (is_dir ( $vendor_folder )) {
+//     define ( 'VENDOR', $vendor_folder . '/' );
+// } else {
+//     if (! is_dir ( BASEPATH . $vendor_folder . '/' )) {
+//         exit ( "Your application folder path does not appear to be set correctly. Please open the following file and correct this: " . SELF );
+//     }
+//     define ( 'VENDOR', BASEPATH . $vendor_folder . '/' );
+// }
+
+
 
 /*
  * -------------------------------------------------------------------- LOAD THE BOOTSTRAP FILE -------------------------------------------------------------------- And away we go...
  */
-
+$loader = require '../vendor/autoload.php';
+include_once 'loader_registration.inc';
 require_once BASEPATH . 'core/CodeIgniter.php';
+
 
 /* End of file index.php */
 /* Location: ./index.php */

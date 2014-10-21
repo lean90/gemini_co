@@ -37,5 +37,12 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+
+class constants {
+	CONST ACCOUNT_ROLE_USER = "USER";
+	CONST ACCOUNT_ROLE_ADMIN = "ADMIN";
+	CONST ACCOUNT_ROLE_SYS = "SYS";
+}
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
