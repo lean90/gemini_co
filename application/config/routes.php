@@ -38,8 +38,17 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "home/index";
 $route['404_override'] = '';
+if (array_key_exists('REQUEST_METHOD', $_SERVER))
+{
+    if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+        $route['login'] = "login/index";
+    }
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $route['login'] = "login/in";
+    }
+}
 
 
 /* End of file routes.php */

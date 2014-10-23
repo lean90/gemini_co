@@ -151,7 +151,7 @@ if (is_dir ( $application_folder )) {
  * -------------------------------------------------------------------- LOAD THE BOOTSTRAP FILE -------------------------------------------------------------------- And away we go...
  */
 $loader = require '../vendor/autoload.php';
-include_once 'loader_registration.inc';
+include_once '../loader_registration.inc';
 require_once BASEPATH . 'core/CodeIgniter.php';
 
 

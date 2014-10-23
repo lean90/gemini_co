@@ -176,7 +176,7 @@ class Room extends EntityBase
      *
      * @Column(name="factor_ng_tho", type="decimal", nullable=true)
      */
-    private $factorNgTho;
+    private $factorNhTho;
 
     /**
      * @var datetime $createdAt
@@ -702,25 +702,25 @@ class Room extends EntityBase
     }
 
     /**
-     * Set factorNgTho
+     * Set factorNhTho
      *
      * @param decimal $factorNgTho
      * @return Room
      */
-    public function setFactorNgTho($factorNgTho)
+    public function setFactorNhTho($factorNhTho)
     {
-        $this->factorNgTho = $factorNgTho;
+        $this->factorNhHoa = $factorNhTho;
         return $this;
     }
 
     /**
-     * Get factorNgTho
+     * Get factorNhTho
      *
      * @return decimal 
      */
-    public function getFactorNgTho()
+    public function getFactorNhTho()
     {
-        return $this->factorNgTho;
+        return $this->factorNhTho;
     }
 
     /**

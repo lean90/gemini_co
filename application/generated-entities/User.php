@@ -45,7 +45,7 @@ class User
     /**
      * @var datetime $createdAt
      *
-     * @ORM\Column(name="created_at", type="datetime", nullable=true)
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
      */
     private $createdAt;
 

@@ -343,7 +343,7 @@ body > .header .navbar {
 }
 body > .header .navbar .sidebar-toggle {
   float: left;
-  padding: 4px 5px;
+  padding: 10px 15px;
   margin-top: 8px;
   margin-right: 0;
   margin-bottom: 8px;
@@ -398,13 +398,13 @@ body > .header .navbar .nav > li > a:hover > .label {
 body > .header .logo {
   float: left;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 50px;
   text-align: center;
   padding: 0 10px;
   width: 175px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: Arial, sans-serif;
   font-weight: 500;
-  height: 40px;
+  height: 50px;
   display: block;
 }
 body > .header .logo .icon {

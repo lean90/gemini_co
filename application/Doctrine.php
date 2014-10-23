@@ -6,6 +6,8 @@ require_once '../ENVIRONMENT.php';
 chdir(APPPATH);
 
 require __DIR__ . '/libraries/Doctrine.php';
+include_once '../vendor/autoload.php';
+include_once '../loader_registration.inc';
 
 foreach ($GLOBALS as $helperSetCandidate) {
     if ($helperSetCandidate instanceof \Symfony\Component\Console\Helper\HelperSet) {

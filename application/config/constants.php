@@ -42,6 +42,7 @@ class constants {
 	CONST ACCOUNT_ROLE_USER = "USER";
 	CONST ACCOUNT_ROLE_ADMIN = "ADMIN";
 	CONST ACCOUNT_ROLE_SYS = "SYS";
+	CONST SESSION_USER_KEY = "USER_ID";
 }
 
 /* End of file constants.php */
