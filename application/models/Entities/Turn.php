@@ -18,189 +18,189 @@ class Turn extends EntityBase
      * @Id
      * @GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var datetime $startedAt
      *
      * @Column(name="started_at", type="datetime", nullable=true)
      */
-    private $startedAt;
+    public $startedAt;
 
     /**
      * @var datetime $completedAt
      *
      * @Column(name="completed_at", type="datetime", nullable=true)
      */
-    private $completedAt;
+    public $completedAt;
 
     /**
      * @var string $pickNumberCollection
      *
      * @Column(name="pick_number_collection", type="string", length=255, nullable=true)
      */
-    private $pickNumberCollection;
+    public $pickNumberCollection;
 
     /**
      * @var decimal $factorTai
      *
      * @Column(name="factor_tai", type="decimal", nullable=true)
      */
-    private $factorTai;
+    public $factorTai;
 
     /**
      * @var decimal $factorXiu
      *
      * @Column(name="factor_xiu", type="decimal", nullable=true)
      */
-    private $factorXiu;
+    public $factorXiu;
 
     /**
      * @var decimal $factorTong810
      *
      * @Column(name="factor_tong810", type="decimal", nullable=true)
      */
-    private $factorTong810;
+    public $factorTong810;
 
     /**
      * @var decimal $factorLe
      *
      * @Column(name="factor_le", type="decimal", nullable=true)
      */
-    private $factorLe;
+    public $factorLe;
 
     /**
      * @var decimal $factorChan
      *
      * @Column(name="factor_chan", type="decimal", nullable=true)
      */
-    private $factorChan;
+    public $factorChan;
 
     /**
      * @var decimal $factorCacSoChan
      *
      * @Column(name="factor_cac_so_chan", type="decimal", nullable=true)
      */
-    private $factorCacSoChan;
+    public $factorCacSoChan;
 
     /**
      * @var decimal $factorCacSoLe
      *
      * @Column(name="factor_cac_so_le", type="decimal", nullable=true)
      */
-    private $factorCacSoLe;
+    public $factorCacSoLe;
 
     /**
      * @var decimal $factorCacSoHoa
      *
      * @Column(name="factor_cac_so_hoa", type="decimal", nullable=true)
      */
-    private $factorCacSoHoa;
+    public $factorCacSoHoa;
 
     /**
      * @var decimal $factorLienHoanTaiLe
      *
      * @Column(name="factor_lien_hoan_tai_le", type="decimal", nullable=true)
      */
-    private $factorLienHoanTaiLe;
+    public $factorLienHoanTaiLe;
 
     /**
      * @var decimal $factorLienHoanXiuLe
      *
      * @Column(name="factor_lien_hoan_xiu_le", type="decimal", nullable=true)
      */
-    private $factorLienHoanXiuLe;
+    public $factorLienHoanXiuLe;
 
     /**
      * @var decimal $factorLienHoanTaiChan
      *
      * @Column(name="factor_lien_hoan_tai_chan", type="decimal", nullable=true)
      */
-    private $factorLienHoanTaiChan;
+    public $factorLienHoanTaiChan;
 
     /**
      * @var decimal $factorLienHoanXiuChan
      *
      * @Column(name="factor_lien_hoan_xiu_chan", type="decimal", nullable=true)
      */
-    private $factorLienHoanXiuChan;
+    public $factorLienHoanXiuChan;
 
     /**
      * @var decimal $factorTren
      *
      * @Column(name="factor_tren", type="decimal", nullable=true)
      */
-    private $factorTren;
+    public $factorTren;
 
     /**
      * @var decimal $factorDuoi
      *
      * @Column(name="factor_duoi", type="decimal", nullable=true)
      */
-    private $factorDuoi;
+    public $factorDuoi;
 
     /**
      * @var decimal $factorHoa
      *
      * @Column(name="factor_hoa", type="decimal", nullable=true)
      */
-    private $factorHoa;
+    public $factorHoa;
 
     /**
      * @var decimal $factorNhKim
      *
      * @Column(name="factor_nh_kim", type="decimal", nullable=true)
      */
-    private $factorNhKim;
+    public $factorNhKim;
 
     /**
      * @var decimal $factorNhMoc
      *
      * @Column(name="factor_nh_moc", type="decimal", nullable=true)
      */
-    private $factorNhMoc;
+    public $factorNhMoc;
 
     /**
      * @var decimal $factorNhThuy
      *
      * @Column(name="factor_nh_thuy", type="decimal", nullable=true)
      */
-    private $factorNhThuy;
+    public $factorNhThuy;
 
     /**
      * @var decimal $factorNhHoa
      *
      * @Column(name="factor_nh_hoa", type="decimal", nullable=true)
      */
-    private $factorNhHoa;
+    public $factorNhHoa;
 
     /**
      * @var decimal $factorNgTho
      *
      * @Column(name="factor_ng_tho", type="decimal", nullable=true)
      */
-    private $factorNgTho;
+    public $factorNgTho;
 
     /**
      * @var datetime $createdAt
      *
      * @Column(name="created_at", type="datetime", nullable=true)
      */
-    private $createdAt;
+    public $createdAt;
 
     /**
      * @var datetime $deletedAt
      *
      * @Column(name="deleted_at", type="datetime", nullable=true)
      */
-    private $deletedAt;
+    public $deletedAt;
 
     /**
      * @var boolean $delete
      *
      * @Column(name="deleted", type="boolean", nullable=true)
      */
-    private $deleted;
+    public $deleted;
 
     /**
      * @var Room
@@ -210,7 +210,7 @@ class Turn extends EntityBase
      *   @JoinColumn(name="fk_room", referencedColumnName="id")
      * })
      */
-    private $fkRoom;
+    public $fkRoom;
 
 
     /**

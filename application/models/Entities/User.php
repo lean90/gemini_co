@@ -16,56 +16,56 @@ class User extends EntityBase
      * @Id
      * @GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var string $username
      *
      * @Column(name="username", type="string", length=50, nullable=true)
      */
-    private $username;
+    public $username;
 
     /**
      * @var string $password
      *
      * @Column(name="password", type="string", length=50, nullable=true)
      */
-    private $password;
+    public $password;
 
     /**
      * @var string $userRole
      *
      * @Column(name="user_role", type="string", length=20, nullable=true)
      */
-    private $userRole;
+    public $userRole;
 
     /**
      * @var datetime $createdAt
      * 
      * @Column(name="created_at", type="datetime")
      */
-    private $createdAt;
+    public $createdAt;
 
     /**
      * @var datetime $deletedAt
      *
      * @Column(name="deleted_at", type="datetime", nullable=true)
      */
-    private $deletedAt;
+    public $deletedAt;
 
     /**
      * @var datetime $updatedAt
      * 
      * @Column(name="updated_at", type="datetime", nullable=true)
      */
-    private $updatedAt;
+    public $updatedAt;
 
     /**
      * @var boolean $deleted
      *
      * @Column(name="deleted", type="boolean", nullable=true)
      */
-    private $deleted;
+    public $deleted;
 
 
     /**

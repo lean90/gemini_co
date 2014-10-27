@@ -55,6 +55,7 @@ class MY_Controller extends CI_Controller {
             if ($this->config->item ( 'under_maintenance' )) throw new Gemini_MaintenanceException ( 'BẢO TRÌ HỆ THỐNG' );
             $this->init ();
             call_user_func_array ( array ($this,$method ), $ar_arg );
+            
         } catch ( Gemini_ViewException $e ) {
             log_message ( 'infor', $e );
             $this->output->set_status_header ( $e->status_code );
@@ -98,11 +99,11 @@ class MY_Controller extends CI_Controller {
      */
     protected function init() {
         $this->load->helper ( 'form' );
-        $this->authorizationRequired = $this->authorizationRequired;
+        $authorizationRequired = $this->authorizationRequired;
         $this->setUserToMe();
         $this->setDatetimesToMe();
-        if ($this->authorizationRequired) {
-            if (! $this->user->isAuthen) {
+        if ($authorizationRequired) {
+            if (!$this->user->isAuthen) {
                 throw new Gemini_AuthenticationException ( "You haven't permission" );
             }
         }
@@ -154,7 +155,8 @@ class MY_Controller extends CI_Controller {
             $this->user = new ModelUser();
         }else{
             $repositoryUser = new RepositoryUser($this->doctrine);
-            $this->user = $repositoryUser->getUserByUserId($userId);
+            $this->user = new ModelUser();
+            $this->user = $repositoryUser->getModelUserByUserId($userId);
             $this->user->isAuthen = true;
         }
     }

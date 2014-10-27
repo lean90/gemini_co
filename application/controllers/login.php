@@ -27,7 +27,6 @@ class login extends ControllerBase {
         $this->user = new ModelUser($users[0]);
         $this->user->isAuthen = true;
         $this->session->set_userdata(constants::SESSION_USER_KEY,$this->user->entityUser->getId());
-        
         redirect($targetPage);
     }
 }

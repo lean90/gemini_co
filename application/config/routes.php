@@ -44,6 +44,8 @@ if (array_key_exists('REQUEST_METHOD', $_SERVER))
 {
     if ($_SERVER['REQUEST_METHOD'] == 'GET'){
         $route['login'] = "login/index";
+        $route['game-lotto'] = "lotto/index";
+        $route['room'] = "api/room/getAllRoom";
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $route['login'] = "login/in";

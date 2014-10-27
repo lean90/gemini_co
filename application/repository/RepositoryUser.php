@@ -19,7 +19,7 @@ class RepositoryUser extends RepositoryBase{
      * @param String $userId
      * @return ModelUser
      */
-    public function getUserByUserId($userId){
+    public function getModelUserByUserId($userId){
         $modelUser = new ModelUser();
         $models = $this->db->em->getRepository(get_class(new User()))->findBy(array("id"=>$userId));
         if(count($models) > 0){

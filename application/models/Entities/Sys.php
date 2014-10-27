@@ -18,21 +18,21 @@ class Sys extends EntityBase
      * @Id
      * @GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var string $sysKey
      *
      * @Column(name="sys_key", type="string", length=255, nullable=true)
      */
-    private $sysKey;
+    public $sysKey;
 
     /**
      * @var string $sysValue
      *
      * @Column(name="sys_value", type="string", length=255, nullable=true)
      */
-    private $sysValue;
+    public $sysValue;
 
 
     /**

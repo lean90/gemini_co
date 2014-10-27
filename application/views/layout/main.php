@@ -62,7 +62,7 @@
 				</div>
 				<ul class="sidebar-menu">
 					<li class="active">
-					   <a href="/lotto_game"> 
+					   <a href="/game-lotto"> 
 					       <i class="fa fa-dashboard"></i><span>Lotto games</span>
 					   </a>
 					</li>
@@ -94,10 +94,10 @@
 <!-- 	<script src="/js/plugins/config-plugins.js"></script> -->
 <!-- 	<script src="/js/plugins/validation/additional-methods.min.js"></script> -->
 	<script src="/js/AdminLTE/app.js" type="text/javascript"></script>
-
+	
 	<script src="/js/angular/angular.min.js" type="text/javascript"></script>
-	<script src="/js/angular/ng-tags-input.min.js" type="text/javascript"></script>
 	<script src="/js/angular/angular-route.min.js" type="text/javascript"></script>
+	<script src="/js/angular/ng-tags-input.min.js" type="text/javascript"></script>
 	<script src="/js/angular/filters.js" type="text/javascript"></script>
 	<script src="/js/controllers/Gemini-app.js" type="text/javascript"></script>
 <!-- 	<script src="/js/controllers/GeminiCommon.js" type="text/javascript"></script> -->

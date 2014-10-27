@@ -19,147 +19,147 @@ class MasterPickupCollection
      * Id
      * GeneratedValue(strategy="GUID")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var integer $index1
      *
      * Column(name="index_1", type="integer", nullable=true)
      */
-    private $index1;
+    protected $index1;
 
     /**
      * @var integer $index2
      *
      * Column(name="index_2", type="integer", nullable=true)
      */
-    private $index2;
+    protected $index2;
 
     /**
      * @var integer $index3
      *
      * Column(name="index_3", type="integer", nullable=true)
      */
-    private $index3;
+    protected $index3;
 
     /**
      * @var integer $index4
      *
      * Column(name="index_4", type="integer", nullable=true)
      */
-    private $index4;
+    protected $index4;
 
     /**
      * @var integer $index5
      *
      * Column(name="index_5", type="integer", nullable=true)
      */
-    private $index5;
+    protected $index5;
 
     /**
      * @var integer $index6
      *
      * Column(name="index_6", type="integer", nullable=true)
      */
-    private $index6;
+    protected $index6;
 
     /**
      * @var integer $index7
      *
      * Column(name="index_7", type="integer", nullable=true)
      */
-    private $index7;
+    protected $index7;
 
     /**
      * @var integer $index8
      *
      * Column(name="index_8", type="integer", nullable=true)
      */
-    private $index8;
+    protected $index8;
 
     /**
      * @var integer $index9
      *
      * Column(name="index_9", type="integer", nullable=true)
      */
-    private $index9;
+    protected $index9;
 
     /**
      * @var integer $index10
      *
      * Column(name="index_10", type="integer", nullable=true)
      */
-    private $index10;
+    protected $index10;
 
     /**
      * @var integer $index11
      *
      * Column(name="index_11", type="integer", nullable=true)
      */
-    private $index11;
+    protected $index11;
 
     /**
      * @var integer $index12
      *
      * Column(name="index_12", type="integer", nullable=true)
      */
-    private $index12;
+    protected $index12;
 
     /**
      * @var integer $index13
      *
      * Column(name="index_13", type="integer", nullable=true)
      */
-    private $index13;
+    protected $index13;
 
     /**
      * @var integer $index14
      *
      * Column(name="index_14", type="integer", nullable=true)
      */
-    private $index14;
+    protected $index14;
 
     /**
      * @var integer $index15
      *
      * Column(name="index_15", type="integer", nullable=true)
      */
-    private $index15;
+    protected $index15;
 
     /**
      * @var integer $index16
      *
      * Column(name="index_16", type="integer", nullable=true)
      */
-    private $index16;
+    protected $index16;
 
     /**
      * @var integer $index17
      *
      * Column(name="index_17", type="integer", nullable=true)
      */
-    private $index17;
+    protected $index17;
 
     /**
      * @var integer $index18
      *
      * Column(name="index_18", type="integer", nullable=true)
      */
-    private $index18;
+    protected $index18;
 
     /**
      * @var integer $index19
      *
      * Column(name="index_19", type="integer", nullable=true)
      */
-    private $index19;
+    protected $index19;
 
     /**
      * @var integer $index20
      *
      * Column(name="index_20", type="integer", nullable=true)
      */
-    private $index20;
+    protected $index20;
 
 
     /**

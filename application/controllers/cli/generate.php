@@ -21,7 +21,6 @@ class generate extends cli_base_controller {
     
     function create_room(){
         $cliRoom = new ServiceCliRoom(new RepositoryRoom($this->doctrine));
-        $cliRoom->
     }
     
     function create_setting(){

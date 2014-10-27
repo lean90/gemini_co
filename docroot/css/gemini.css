@@ -10,3 +10,58 @@
 	width: 100%;
 	z-index: 9999;
 }
+.lotto-box{
+    height:50px;
+    float:left;
+    background: #f4f4f4;
+    border: solid 1px white;
+    cursor: pointer;
+    padding:2px;
+}
+
+.x1{
+    width:10%;
+}
+.x2{
+    width:20%;
+}
+.bet-type{
+	color:#5d4200;
+	font-size: 18px;
+	font-weight: bold;
+}
+.odds-value{
+	color:#870000;
+	font-size: 18px;
+	font-weight: bold;
+}
+.x2 .odds-value{
+    float:right;
+}
+.lotto-box .small{
+	font-size: 12px;
+	line-height: 25px;	
+}
+.lotto-box:hover{
+    background: #00c0ef;
+    
+}
+.lotto-box-title{
+	background: #3b5998;
+	color:white;
+}
+.lotto-box-title h3, .lotto-box-title h4{
+	margin:0px;
+}
+.box-game-time{
+	float:right;
+}
+.box-game-time > span.des{
+	font-size: 12px;
+}
+.box-game-turn{
+	float:left;
+}
+.lotto-box-result{
+	background: #e9eaed;
+}

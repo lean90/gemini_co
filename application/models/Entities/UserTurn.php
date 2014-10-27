@@ -16,49 +16,49 @@ class UserTurn extends EntityBase
      * @Id
      * @GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var string $pickType
      *
      * @Column(name="pick_type", type="string", length=50, nullable=true)
      */
-    private $pickType;
+    public $pickType;
 
     /**
      * @var string $pickValue
      *
      * @Column(name="pick_value", type="string", length=50, nullable=true)
      */
-    private $pickValue;
+    public $pickValue;
 
     /**
      * @var string $pickCollection
      *
      * @Column(name="pick_collection", type="string", length=255, nullable=true)
      */
-    private $pickCollection;
+    public $pickCollection;
 
     /**
      * @var datetime $createdAt
      *
      * @Column(name="created_at", type="datetime", nullable=true)
      */
-    private $createdAt;
+    public $createdAt;
 
     /**
      * @var datetime $deletedAt
      *
      * @Column(name="deleted_at", type="datetime", nullable=true)
      */
-    private $deletedAt;
+    public $deletedAt;
 
     /**
      * @var boolean $deleted
      *
      * @Column(name="deleted", type="boolean", nullable=true)
      */
-    private $deleted;
+    public $deleted;
 
     /**
      * @var Turn
@@ -68,7 +68,7 @@ class UserTurn extends EntityBase
      *   @JoinColumn(name="fk_turn", referencedColumnName="id")
      * })
      */
-    private $fkTurn;
+    public $fkTurn;
 
     /**
      * @var User
@@ -78,7 +78,7 @@ class UserTurn extends EntityBase
      *   @JoinColumn(name="fk_user", referencedColumnName="id")
      * })
      */
-    private $fkUser;
+    public $fkUser;
 
 
     /**
