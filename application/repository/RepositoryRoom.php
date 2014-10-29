@@ -45,7 +45,7 @@ class RepositoryRoom  extends RepositoryBase{
     }
     
     /**
-     * get All actived room
+     * @return array<Room>
      */
     function getActiveRoom(){
         return $this->db->em->getRepository(get_class(new Room()))->findBy(

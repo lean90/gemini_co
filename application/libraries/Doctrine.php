@@ -9,6 +9,10 @@ use Doctrine\ORM\Tools\EntityGenerator;
 
 class Doctrine
 {
+    /**
+     * 
+     * @var EntityManager
+     */
     public $em;
 
     public function __construct()

@@ -10,6 +10,6 @@ class lotto extends ControllerBase {
         $data = array(
             'token' => $serviceSecurity->getTokenKey($this->user)
         );
-        LayoutFactory::getLayout(LayoutFactory::MAIN)->setJavascript(array("/js/controllers/LottoController.js"))->setData($data)->render("lotto");
+        LayoutFactory::getLayout(LayoutFactory::MAIN)->setJavascript(array("/js/controllers/LottoController.js","/js/controllers/RoomManager.js"))->setData($data)->render("lotto");
     }
 }

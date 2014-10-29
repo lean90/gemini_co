@@ -3,7 +3,7 @@ function LottoController($scope,$http){
 	$scope.rooms = [];
 	$scope.lRooms = [];
 	$scope.rRooms = [];
-	
+	$scope.roomsManager = [];
 	$url = 'api/room/getAllRoom?token='+$scope.token;
     $http.get($url,
             {headers:{"If-Modified-Since":"Thu,01 Jun 1970 00:00:00 GMT"}}
@@ -11,18 +11,15 @@ function LottoController($scope,$http){
     	  $scope.rooms = data.data;
     	  $scope.rooms.forEach(function(value,index){
     		 if(index%2 != 0){
-    			 $scope.lRooms.push(value);
-    		 } else{
     			 $scope.rRooms.push(value);
+    		 } else{
+    			 $scope.lRooms.push(value);
     		 }
+    		 var roomManager = new RoomManager($scope,$http,value);
+	         roomManager.init();
     	  });
-    	  $scope.InitaRoomManager();
       }).error(function(xhr, status, error){
           
       });
-    
-    $scope.InitaRoomManager = function(){
-    	
-    };
 }
 LottoController.$inject = ['$scope','$http'];

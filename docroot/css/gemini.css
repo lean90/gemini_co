@@ -37,6 +37,7 @@
 }
 .x2 .odds-value{
     float:right;
+	padding-left:10px;
 }
 .lotto-box .small{
 	font-size: 12px;
