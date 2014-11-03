@@ -31,7 +31,7 @@ CREATE TABLE `ci_sessions` (
 
 /*Data for the table `ci_sessions` */
 
-insert  into `ci_sessions`(`session_id`,`ip_address`,`user_agent`,`last_activity`,`user_data`) values ('54f178bce169aa8622c389c1522f99fe','127.0.0.1','Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/53',1414423741,'a:2:{s:9:\"user_data\";s:0:\"\";s:7:\"USER_ID\";i:109;}'),('77da5aa9ccc34561c377e4a1bab4d6a0','127.0.0.1','Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/53',1414422472,''),('d21a292e5119a13694c2043ebb27901f','127.0.0.1','Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/53',1414343653,'a:2:{s:9:\"user_data\";s:0:\"\";s:7:\"USER_ID\";i:109;}');
+insert  into `ci_sessions`(`session_id`,`ip_address`,`user_agent`,`last_activity`,`user_data`) values ('93aec9ea52bb6835536fc61e744c026c','127.0.0.1','Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/53',1414944338,'a:2:{s:9:\"user_data\";s:0:\"\";s:7:\"USER_ID\";i:109;}');
 
 /*Table structure for table `room` */
 
@@ -66,12 +66,14 @@ CREATE TABLE `room` (
   `deleted_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT NULL,
+  `max_value` int(11) NOT NULL,
+  `min_value` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `room` */
 
-insert  into `room`(`id`,`room_name`,`room_location`,`duration`,`factor_tai`,`factor_xiu`,`factor_tong810`,`factor_le`,`factor_chan`,`factor_cac_so_chan`,`factor_cac_so_le`,`factor_cac_so_hoa`,`factor_lien_hoan_tai_le`,`factor_lien_hoan_xiu_le`,`factor_lien_hoan_tai_chan`,`factor_lien_hoan_xiu_chan`,`factor_tren`,`factor_duoi`,`factor_hoa`,`factor_nh_kim`,`factor_nh_moc`,`factor_nh_thuy`,`factor_nh_hoa`,`factor_ng_tho`,`created_at`,`deleted_at`,`updated_at`,`deleted`) values (1,'Phòng Hà Nôi','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0),(2,'Phòng Đà Nằng','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0),(3,'Phòng Sài Gòn','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0);
+insert  into `room`(`id`,`room_name`,`room_location`,`duration`,`factor_tai`,`factor_xiu`,`factor_tong810`,`factor_le`,`factor_chan`,`factor_cac_so_chan`,`factor_cac_so_le`,`factor_cac_so_hoa`,`factor_lien_hoan_tai_le`,`factor_lien_hoan_xiu_le`,`factor_lien_hoan_tai_chan`,`factor_lien_hoan_xiu_chan`,`factor_tren`,`factor_duoi`,`factor_hoa`,`factor_nh_kim`,`factor_nh_moc`,`factor_nh_thuy`,`factor_nh_hoa`,`factor_ng_tho`,`created_at`,`deleted_at`,`updated_at`,`deleted`,`max_value`,`min_value`) values (1,'Phòng Hà Nôi','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0,15000000,15000),(2,'Phòng Đà Nằng','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0,15000000,15000),(3,'Phòng Sài Gòn','HA NOI, VIET NAM',120,'1.95','1.95','108.00','1.95','1.95','2.30','2.30','4.30','3.70','3.70','3.70','3.70','2.30','2.30','4.30','9.20','4.60','2.40','4.60','9.20','2014-10-22 17:38:11',NULL,NULL,0,15000000,15000);
 
 /*Table structure for table `sys` */
 
@@ -96,7 +98,7 @@ CREATE TABLE `turn` (
   `started_at` datetime DEFAULT NULL,
   `completed_at` datetime DEFAULT NULL,
   `pick_number_collection` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `factor_tai` decimal(10,0) DEFAULT NULL,
+  `factor_tai` decimal(10,2) DEFAULT NULL,
   `factor_xiu` decimal(10,2) DEFAULT NULL,
   `factor_tong810` decimal(10,2) DEFAULT NULL,
   `factor_le` decimal(10,2) DEFAULT NULL,
@@ -115,14 +117,19 @@ CREATE TABLE `turn` (
   `factor_nh_moc` decimal(10,2) DEFAULT NULL,
   `factor_nh_thuy` decimal(10,2) DEFAULT NULL,
   `factor_nh_hoa` decimal(10,2) DEFAULT NULL,
-  `factor_ng_tho` decimal(10,2) DEFAULT NULL,
+  `factor_nh_tho` decimal(10,2) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT NULL,
+  `turn_status` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `min_value` int(11) NOT NULL,
+  `max_value` int(11) NOT NULL,
+  `turn_number` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_20201547FEA18FA5` (`fk_room`),
   CONSTRAINT `FK_20201547FEA18FA5` FOREIGN KEY (`fk_room`) REFERENCES `room` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `turn` */
 

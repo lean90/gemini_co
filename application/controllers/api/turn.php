@@ -6,4 +6,8 @@ class turn extends ControllerAPIBase{
     function getResult($turnId){
         
     }
+    
+    function placeABet(){
+    	
+    }
 }

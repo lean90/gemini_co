@@ -4,12 +4,13 @@ namespace repository;
 use models\Entities\Turn;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\Common\Util\Debug;
+use models\Entities\Room;
 class RepositoryTurn extends RepositoryBase {
     
     CONST id = "id";
-    CONST fk_room  = "fk_room";
+    CONST fk_room  = "fkRoom";
     CONST started_at = "started_at";
-    CONST completed_at = "completed_at";
+    CONST completed_at = "completedAt";
     CONST pick_number_collection  = "pick_number_collection";
     CONST factor_tai = "factor_tai";
     CONST factor_xiu = "factor_xiu";
@@ -80,6 +81,7 @@ class RepositoryTurn extends RepositoryBase {
      */
     function insertedNewTurn($rooms){
         foreach ($rooms as $room){
+            $lastTurn = $this->getLastTurnByRoom($room->getId());
             $completedAt =  new \DateTime();
             $completedAt->modify("+{$room->getDuration()} seconds");
             $turn = new Turn();
@@ -87,6 +89,9 @@ class RepositoryTurn extends RepositoryBase {
             $turn->createdAt = new \DateTime();
             $turn->startedAt = new \DateTime();
             $turn->completedAt = $completedAt;
+            $turn->maxValue = $room->maxValue;
+            $turn->minValue = $room->minValue;
+            $turn->turnNumber = count($lastTurn) == 0 ? 1 : $lastTurn[0]->turnNumber + 1 ;
             $turn->factorCacSoChan = $room->factorCacSoChan;
             $turn->factorCacSoHoa = $room->factorCacSoHoa;
             $turn->factorCacSoLe = $room->factorCacSoLe;

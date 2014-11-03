@@ -35,6 +35,28 @@ class Turn extends EntityBase
     public $completedAt;
 
     /**
+     * @var integer min_value
+     *
+     * @Column(name="min_value", type="integer", nullable=false)
+     */
+    public  $minValue;
+    
+    
+    /**
+     * @var integer max_value
+     *
+     * @Column(name="max_value", type="integer", nullable=false)
+     */
+    public  $maxValue;
+    
+    /**
+     * @var integer turn_number
+     *
+     * @Column(name="turn_number", type="integer", nullable=false)
+     */
+    public  $turnNumber;
+    
+    /**
      * @var string $pickNumberCollection
      *
      * @Column(name="pick_number_collection", type="string", length=255, nullable=true)

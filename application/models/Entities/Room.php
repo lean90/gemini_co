@@ -39,6 +39,21 @@ class Room extends EntityBase
     public $duration;
 
     /**
+     * @var integer $id
+     *
+     * @Column(name="max_value", type="integer", nullable=false)
+     */
+    public  $maxValue;
+    
+    /**
+     * @var integer $id
+     *
+     * @Column(name="min_value", type="integer", nullable=false)
+     */
+    public  $minValue;
+    
+    
+    /**
      * @var decimal $factorTai
      *
      * @Column(name="factor_tai", type="decimal", nullable=true,precision=10,scale=2)
@@ -208,6 +223,34 @@ class Room extends EntityBase
 
 
     /**
+     * @return the $maxValue
+     */
+    public function getMaxValue( ){
+        return $this->maxValue;
+    }
+
+	/**
+     * @return the $minValue
+     */
+    public function getMinValue( ){
+        return $this->minValue;
+    }
+
+	/**
+     * @param number $maxValue
+     */
+    public function setMaxValue($maxValue){
+        $this->maxValue = $maxValue;
+    }
+
+	/**
+     * @param number $minValue
+     */
+    public function setMinValue($minValue){
+        $this->minValue = $minValue;
+    }
+
+	/**
      * Get id
      *
      * @return integer 

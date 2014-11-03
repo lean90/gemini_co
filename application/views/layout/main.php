@@ -99,6 +99,7 @@
 	<script src="/js/angular/angular-route.min.js" type="text/javascript"></script>
 	<script src="/js/angular/ng-tags-input.min.js" type="text/javascript"></script>
 	<script src="/js/angular/filters.js" type="text/javascript"></script>
+	<script src="/js/plugins/angular-fcsa-number/fcsaNumber.js" type="text/javascript"></script>
 	<script src="/js/controllers/Gemini-app.js" type="text/javascript"></script>
 <!-- 	<script src="/js/controllers/GeminiCommon.js" type="text/javascript"></script> -->
         <?php

@@ -49,6 +49,7 @@ if (array_key_exists('REQUEST_METHOD', $_SERVER))
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $route['login'] = "login/in";
+        $route['api/place-a-bet'] = "api/turn/placeABet";
     }
 }
 
